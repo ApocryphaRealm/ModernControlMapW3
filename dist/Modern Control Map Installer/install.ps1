@@ -6,13 +6,15 @@
 #                                                        profile-specific game settings)
 param(
     [string]$Folder,
-    [switch]$Uninstall
+    [switch]$Uninstall,
+    # build tests on a copy only (tools); never needed by a player
+    [switch]$SkipGameCheck
 )
 $ErrorActionPreference = 'Stop'
 
 function Fail([string]$msg) { Write-Host ''; Write-Host "  $msg" -ForegroundColor Red; Write-Host ''; exit 1 }
 
-if (Get-Process -Name 'witcher3' -ErrorAction SilentlyContinue) { Fail 'The Witcher 3 is running - close it first.' }
+if (-not $SkipGameCheck -and (Get-Process -Name 'witcher3' -ErrorAction SilentlyContinue)) { Fail 'The Witcher 3 is running - close it first.' }
 
 if (-not $Folder) { $Folder = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'The Witcher 3' }
 $inputFile = Join-Path $Folder 'input.settings'
@@ -59,16 +61,22 @@ foreach ($ctx in $byContext.Keys) {
         while ($end -lt $lines.Count -and -not $lines[$end].StartsWith('[')) { $end++ }
         $act = [regex]::Escape($r.action)
         $padRx = "^(IK_Pad_\w+|IK_PS4_\w+)=\(Action=$act[,)]"
-        $noneRx = "^IK_None=\(Action=$act[,)]"
-        $last = -1; $hasNone = $false
+        $last = -1; $have = @{}
         for ($i = $end - 1; $i -gt $start; $i--) {
             if ($lines[$i] -match $padRx) { $lines.RemoveAt($i); $end--; continue }
-            if ($lines[$i] -match "^\w+=\(Action=$act[,)]") { if ($last -lt 0) { $last = $i }; if ($lines[$i] -match $noneRx) { $hasNone = $true } }
+            if ($lines[$i] -match "^\w+=\(Action=$act[,)]") {
+                if ($last -lt 0) { $last = $i }
+                if ($lines[$i].StartsWith('IK_None=')) { $have[$lines[$i]] = 1 + [int]$have[$lines[$i]] }
+            }
         }
         $at = if ($last -ge 0) { $last + 1 } else { $end }
         while ($at -gt $start + 1 -and $lines[$at - 1] -eq '' -and $last -lt 0) { $at-- }
         $add = @($r.pad)
-        if ($r.unbound -and -not $hasNone) { $add = @("IK_None=(Action=$($r.action))") }
+        # each empty pad slot the map leaves is an IK_None line with the action's own State/IdleTime, up to the number
+        # the map has - so a second run adds none
+        foreach ($n in @($r.none)) {
+            for ($k = [int]$have[$n.line]; $k -lt [int]$n.count; $k++) { $add += $n.line }
+        }
         foreach ($l in $add) { $lines.Insert($at, $l); $at++ }
         $changed++
     }

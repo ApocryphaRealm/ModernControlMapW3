@@ -28,11 +28,12 @@ def load(path):
         m = LINE.match(s)
         if m and ctx:
             key, action, rest = m.groups()
-            e = out.setdefault((ctx, action), {'pad': [], 'none': 0})
+            e = out.setdefault((ctx, action), {'pad': [], 'none': {}})
             if is_pad(key):
                 e['pad'].append(key + '=(Action=' + action + rest)
             elif key == 'IK_None':
-                e['none'] += 1
+                line = 'IK_None=(Action=' + action + rest
+                e['none'][line] = e['none'].get(line, 0) + 1
     return out
 
 
@@ -40,10 +41,12 @@ def build():
     van, new = load(VANILLA), load(MAP)
     rules = []
     for k in sorted(set(van) | set(new)):
-        a, b = van.get(k, {'pad': [], 'none': 0}), new.get(k, {'pad': [], 'none': 0})
+        a, b = van.get(k, {'pad': [], 'none': {}}), new.get(k, {'pad': [], 'none': {}})
         if sorted(a['pad']) != sorted(b['pad']):
-            rules.append({'context': k[0], 'action': k[1], 'pad': b['pad'],
-                          'unbound': not b['pad']})
+            # the empty pad slots the map leaves (an IK_None line where the game had a pad button), with the action's
+            # own State/IdleTime kept: the line and how many the context ends up with
+            none = [{'line': line, 'count': n} for line, n in sorted(b['none'].items()) if n > a['none'].get(line, 0)]
+            rules.append({'context': k[0], 'action': k[1], 'pad': b['pad'], 'none': none})
     return {
         'name': 'Modern Control Map',
         'rules': rules,

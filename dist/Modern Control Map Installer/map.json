@@ -7,7 +7,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ALL_ATTACKS",
@@ -15,7 +15,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ALL_ATTACKS",
@@ -23,7 +23,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ALL_ATTACKS",
@@ -31,7 +31,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SpecialAttackLight,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ATTACKS_NO_LIGHT",
@@ -39,7 +39,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ATTACKS_NO_LIGHT",
@@ -47,7 +47,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ATTACK_HEAVY",
@@ -55,7 +55,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_ATTACK_LIGHT",
@@ -63,7 +63,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_CharacterMovementWithSprint",
@@ -71,13 +71,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_CharacterMovementWithSprint",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -85,7 +90,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -93,7 +98,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -101,7 +106,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -109,19 +114,29 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_DRAW_SWORDS",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -129,7 +144,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
@@ -137,13 +152,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
@@ -151,7 +171,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
@@ -159,7 +179,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
@@ -167,7 +187,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
@@ -175,19 +195,29 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_DRAW_SWORDS_KEYBOARD",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_DRINK_POTIONS",
@@ -195,7 +225,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRINK_POTIONS",
@@ -203,7 +233,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRINK_POTIONS",
@@ -211,7 +241,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRINK_POTIONS",
@@ -219,19 +249,29 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_DRINK_POTIONS",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_DRINK_POTIONS",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BASE_FocusMode",
@@ -239,7 +279,7 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Items",
@@ -247,7 +287,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Items",
@@ -255,7 +295,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_SHOW_RADIAL_MENU",
@@ -263,7 +303,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_SPECIAL_ATTACK_HEAVY",
@@ -271,7 +311,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_SPECIAL_ATTACK_LIGHT",
@@ -279,7 +319,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SpecialAttackLight,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -287,7 +327,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSign)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -295,7 +335,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSignHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -303,7 +343,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SelectAard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -311,7 +351,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=SelectAxii)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -319,7 +359,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SelectIgni)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -327,7 +367,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=SelectQuen)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BASE_Signs",
@@ -335,7 +375,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SelectYrden)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
@@ -343,7 +383,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
@@ -351,7 +391,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
@@ -359,7 +399,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
@@ -367,7 +407,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
@@ -375,19 +415,29 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Boat",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Boat",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Boat",
@@ -395,7 +445,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
@@ -403,7 +453,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
@@ -411,7 +461,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
@@ -419,7 +469,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
@@ -427,7 +477,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
@@ -435,19 +485,29 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "BoatPassenger",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BoatPassenger",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "BoatPassenger",
@@ -455,13 +515,18 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
    "action": "AltQuenCasting",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=AltQuenCasting)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Combat",
@@ -469,7 +534,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -477,7 +542,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -485,7 +550,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSign)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -493,7 +558,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSignHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -502,7 +567,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)",
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -511,7 +576,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotion2)",
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -520,7 +585,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -529,7 +594,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -537,19 +602,29 @@
    "pad": [
     "IK_Pad_LeftShoulder=(Action=LockAndGuard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Combat",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Combat",
@@ -557,7 +632,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -565,7 +640,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SelectAard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -573,7 +648,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=SelectAxii)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -581,7 +656,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SelectIgni)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -589,7 +664,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=SelectQuen)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -597,7 +672,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SelectYrden)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -605,13 +680,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
    "action": "SpawnHorse",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SpawnHorse)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Combat",
@@ -619,7 +699,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -627,7 +707,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SpecialAttackLight,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -635,13 +715,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Combat",
@@ -649,13 +734,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Combat",
@@ -663,7 +753,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat",
@@ -671,7 +761,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -679,7 +769,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -687,7 +777,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=CiriAttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -695,7 +785,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CiriSpecialAttack)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -703,7 +793,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=CiriSpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -711,7 +801,7 @@
    "pad": [
     "IK_Pad_LeftShoulder=(Action=LockAndGuard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -719,7 +809,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -727,13 +817,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Combat_Replacer_Ciri",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Combat_Replacer_Ciri",
@@ -741,7 +836,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -749,7 +844,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=DiveDown)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -757,7 +852,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=DiveUp)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -765,7 +860,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -773,7 +868,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -781,7 +876,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -789,7 +884,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -797,7 +892,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=ExplorationInteraction)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -805,19 +900,29 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Diving",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Diving",
@@ -825,7 +930,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -833,13 +938,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Diving",
@@ -847,7 +957,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Diving",
@@ -855,13 +965,18 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
    "action": "AltQuenCasting",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=AltQuenCasting)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Exploration",
@@ -869,7 +984,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -877,7 +992,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -885,7 +1000,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSign)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -893,7 +1008,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CastSignHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -902,7 +1017,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)",
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -911,7 +1026,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotion2)",
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -920,7 +1035,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -929,7 +1044,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -937,7 +1052,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=ExplorationInteraction)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -945,7 +1060,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -953,19 +1068,29 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=Jump)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Exploration",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Exploration",
@@ -973,13 +1098,18 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
    "action": "Roll",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=Roll)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Exploration",
@@ -987,7 +1117,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SelectAard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -995,7 +1125,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=SelectAxii)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1003,7 +1133,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SelectIgni)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1011,7 +1141,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=SelectQuen)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1019,7 +1149,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SelectYrden)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1027,7 +1157,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1035,7 +1165,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=SpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1043,7 +1173,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=SpecialAttackLight,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1051,13 +1181,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Exploration",
@@ -1065,13 +1200,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Exploration",
@@ -1079,7 +1219,7 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration",
@@ -1087,7 +1227,7 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1095,7 +1235,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1103,7 +1243,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=CiriAttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1111,7 +1251,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=CiriSpecialAttack)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1119,7 +1259,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=CiriSpecialAttackHeavy,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1127,7 +1267,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=ExplorationInteraction)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1135,7 +1275,7 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1143,7 +1283,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=Jump)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1151,13 +1291,18 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
    "action": "Roll",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=Roll)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1165,13 +1310,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1179,7 +1329,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Exploration_Replacer_Ciri",
@@ -1187,7 +1337,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1195,7 +1345,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Canter)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1204,7 +1354,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)",
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1213,7 +1363,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotion2)",
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1222,7 +1372,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1231,7 +1381,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1239,7 +1389,7 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1247,7 +1397,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Follow)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1255,7 +1405,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Gallop,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1263,7 +1413,7 @@
    "pad": [
     "IK_Pad_A_CROSS=(Action=HorseDismount,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1271,19 +1421,29 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=HorseJump)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Horse",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Horse",
@@ -1291,7 +1451,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1299,7 +1459,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
@@ -1307,13 +1467,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Horse",
@@ -1321,7 +1486,12 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=VehicleAttack)"
    ],
-   "unbound": false
+   "none": [
+    {
+     "line": "IK_None=(Action=VehicleAttack)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Horse",
@@ -1329,7 +1499,7 @@
    "pad": [
     "IK_Pad_LeftTrigger=(Action=VehicleCastSign)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1337,7 +1507,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Canter)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1345,7 +1515,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Follow)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1353,7 +1523,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Gallop,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1361,7 +1531,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=HorseJump)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1369,7 +1539,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Horse_Replacer_Ciri",
@@ -1377,7 +1547,12 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=VehicleAttack)"
    ],
-   "unbound": false
+   "none": [
+    {
+     "line": "IK_None=(Action=VehicleAttack)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "JumpClimb",
@@ -1385,7 +1560,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=DiveDown)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1394,7 +1569,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)",
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1403,7 +1578,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotion2)",
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1412,7 +1587,7 @@
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1421,7 +1596,7 @@
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)",
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1429,7 +1604,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=ExplorationInteraction)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1437,19 +1612,29 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=Jump)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "JumpClimb",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "JumpClimb",
@@ -1457,13 +1642,18 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
    "action": "Roll",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=Roll)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "JumpClimb",
@@ -1471,7 +1661,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
@@ -1479,13 +1669,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "JumpClimb",
@@ -1493,13 +1688,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "JumpClimb",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "RadialMenu",
@@ -1507,7 +1707,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "RadialMenu",
@@ -1515,7 +1715,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "RadialMenu",
@@ -1523,7 +1723,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "RadialMenu",
@@ -1531,7 +1731,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "RadialMenu",
@@ -1539,19 +1739,29 @@
    "pad": [
     "IK_Pad_LeftShoulder=(Action=LockAndGuard)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "RadialMenu",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "RadialMenu",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "RadialMenu",
@@ -1559,7 +1769,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "SCENE_IS_STARTING_HACK",
@@ -1567,13 +1777,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "SCENE_IS_STARTING_HACK",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "ScriptedAction",
@@ -1581,13 +1796,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ScriptedAction",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Swimming",
@@ -1595,7 +1815,7 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=DiveDown)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1603,7 +1823,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=DiveUp)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1611,7 +1831,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1619,7 +1839,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1627,7 +1847,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1635,7 +1855,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1643,7 +1863,7 @@
    "pad": [
     "IK_Pad_Y_TRIANGLE=(Action=ExplorationInteraction)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1651,19 +1871,29 @@
    "pad": [
     "IK_Pad_DigitUp=(Action=Focus,Reprocess)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Swimming",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "Swimming",
@@ -1671,7 +1901,7 @@
    "pad": [
     "IK_Pad_DigitDown=(Action=RadialMenu)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1679,13 +1909,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "Swimming",
@@ -1693,7 +1928,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "Swimming",
@@ -1701,7 +1936,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1709,7 +1944,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1717,7 +1952,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1725,7 +1960,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1733,19 +1968,29 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "ThrowHold",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "ThrowHold",
@@ -1753,7 +1998,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1761,13 +2006,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "ThrowHold",
@@ -1775,13 +2025,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "ThrowHold",
@@ -1789,7 +2044,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHold",
@@ -1797,7 +2052,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1805,7 +2060,7 @@
    "pad": [
     "IK_Pad_RightTrigger=(Action=AttackHeavy)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1813,7 +2068,7 @@
    "pad": [
     "IK_Pad_RightShoulder=(Action=AttackLight)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1821,7 +2076,7 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotion1)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1829,7 +2084,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotion2)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1837,7 +2092,7 @@
    "pad": [
     "IK_Pad_DigitRight=(Action=DrinkPotionLowerHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1845,19 +2100,29 @@
    "pad": [
     "IK_Pad_DigitLeft=(Action=DrinkPotionUpperHold,State=Duration,IdleTime=0.3)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
    "action": "OilSilver",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSilver,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "ThrowHoldChain",
    "action": "OilSteel",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=OilSteel,State=Duration,IdleTime=0.3)",
+     "count": 1
+    }
+   ]
   },
   {
    "context": "ThrowHoldChain",
@@ -1865,7 +2130,7 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SilverSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1873,13 +2138,18 @@
    "pad": [
     "IK_Pad_B_CIRCLE=(Action=Sprint)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
    "action": "SprintToggle",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SprintToggle)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "ThrowHoldChain",
@@ -1887,13 +2157,18 @@
    "pad": [
     "IK_Pad_X_SQUARE=(Action=SteelSword)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
    "action": "SwordSheathe",
    "pad": [],
-   "unbound": true
+   "none": [
+    {
+     "line": "IK_None=(Action=SwordSheathe,State=Duration,IdleTime=0.3)",
+     "count": 2
+    }
+   ]
   },
   {
    "context": "ThrowHoldChain",
@@ -1901,7 +2176,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItem)"
    ],
-   "unbound": false
+   "none": []
   },
   {
    "context": "ThrowHoldChain",
@@ -1909,7 +2184,7 @@
    "pad": [
     "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
-   "unbound": false
+   "none": []
   }
  ],
  "settings": [

@@ -19,8 +19,10 @@ rebindable"*; download: a controller-only installer).
   -> `map.json`).
 - **Installer**: sets those bindings in input.settings with the game closed and leaves the keyboard alone. Each changed
   file is backed up first, and the uninstaller restores the first backups. It also turns Left Stick Sprint off and
-  alternative sign casting on. Tested on a copy of the game's default file: the pad lines come out equal to the map, no
-  keyboard line changes, and a second run gives the same lines.
+  alternative sign casting on. Each empty pad slot is written as an IK_None line with the action's own State/IdleTime, as the map has it. Tested
+  on a copy of the game's default file: every binding line of the map is in the result, nothing else changed except
+  the game's own gesture and Steam-controller lines being kept, and a second run changes nothing. Main Agent's run on
+  the defaults found the first build missing 56 such IK_None lines; fixed.
 - **Script**, moved here from Unbind Vanilla Controls:
   - out-of-combat tap-to-toggle sprint;
   - both swords on one button (tap steel, hold silver);
