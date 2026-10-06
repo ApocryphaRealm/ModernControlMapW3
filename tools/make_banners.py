@@ -248,7 +248,7 @@ def banner(key, title, subtitle, data):
             lines.append(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="{3 if off else 4.5}" '
                          f'fill="{"#2c2c2e" if off else SK["accent"]}" stroke="{"none" if off else SK["text"]}" '
                          f'stroke-width="1"/>')
-    foot = ('<text x="960" y="1050" text-anchor="middle" class="foot">Xbox layout · Sprint by pressing Left Stick: off · '
+    foot = ('<text x="960" y="1050" text-anchor="middle" class="foot">Xbox layout · Sprint by Pressing Left Stick: off · '
             'Quick Sign Casting: Quick Casting · Automatically Apply Blade Oils: on</text>')
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
            + '\n'.join(head) + controller() + '\n'.join(lines) + foot + '</svg>')

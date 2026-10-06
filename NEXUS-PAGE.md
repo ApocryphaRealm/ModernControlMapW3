@@ -17,7 +17,7 @@ The map is made to be played with these options:
 [list]
 [*][b]Options > Gameplay > Quick Sign Casting: Quick Casting[/b] - required. Holding LT and pressing a sign's button
 casts that sign only in Quick Casting. [i]The installer sets it.[/i]
-[*][b]Options > Controls > [Controller Only] Sprint by pressing Left Stick: Off[/b] - required. While it is on, the game
+[*][b]Options > Controls > Sprint by Pressing Left Stick: Off[/b] - required. While it is on, the game
 ignores B for running on a controller, and the map gives the left stick to Witcher Senses, Roach and the quick item.
 [i]The installer turns it off.[/i]
 [*][b]Options > Accessibility > Automatically Apply Blade Oils: On[/b] - required. The map has no oil buttons (the D-pad

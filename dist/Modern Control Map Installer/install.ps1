@@ -107,7 +107,7 @@ foreach ($name in 'dx12user.settings', 'user.settings') {
     }
     Copy-Item -LiteralPath $f -Destination "$f.before-modern-control-map-$stamp"
     [System.IO.File]::WriteAllText($f, ($ls -join $n2), $utf8)
-    Write-Host "  ${name}: Sprint by pressing Left Stick off, Quick Sign Casting on Quick Casting"
+    Write-Host "  ${name}: Sprint by Pressing Left Stick off, Quick Sign Casting on Quick Casting"
 }
 Write-Host ''
 Write-Host "  Modern Control Map installed. Backups: *.before-modern-control-map-$stamp"

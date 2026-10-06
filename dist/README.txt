@@ -9,7 +9,7 @@ REQUIRED GAME SETTINGS
 The map is made to be played with these options:
   - Options > Gameplay > Quick Sign Casting: Quick Casting - REQUIRED. Holding LT and pressing a sign's button casts
     that sign only in Quick Casting. The installer sets it.
-  - Options > Controls > [Controller Only] Sprint by pressing Left Stick: OFF - REQUIRED. While it is on, the game
+  - Options > Controls > Sprint by Pressing Left Stick: OFF - REQUIRED. While it is on, the game
     ignores the Sprint button (B) on a controller and runs only from the left stick, which the map gives to Witcher
     Senses, Roach and the quick item. The installer turns it off.
   - Options > Accessibility > Automatically Apply Blade Oils: ON - REQUIRED. The map has no oil buttons (the D-pad holds
@@ -42,7 +42,7 @@ WHAT THE MOD ADDS TO THE BINDINGS
 INSTALL
 1. Install the archive as a mod (Mod Organizer 2, Vortex), or copy the Mods folder into the game folder.
 2. Close the game and run "Modern Control Map Installer\Install Modern Control Map.bat". It sets the controller
-   bindings in Documents\The Witcher 3\input.settings, turns Sprint by pressing Left Stick off and Quick Sign Casting
+   bindings in Documents\The Witcher 3\input.settings, turns Sprint by Pressing Left Stick off and Quick Sign Casting
    to Quick Casting, and
    leaves every keyboard binding as it is. It backs up each file it changes first.
    Mod Organizer 2 with profile-specific game settings: drag the profile folder onto the .bat instead.
