@@ -224,7 +224,9 @@ def banner(key, title, subtitle, data):
             f'<text x="960" y="168" text-anchor="middle" class="t3">{html.escape(subtitle)}</text>',
             '<line x1="700" y1="190" x2="1220" y2="190" stroke="#3c3c3e" stroke-width="1"/>',
             f'<rect x="954" y="184" width="12" height="12" transform="rotate(45 960 190)" fill="{SK["accent"]}"/>']
-    rows_y = [262 + i * 106 for i in range(8)]
+    # rows end at 1004 so the footer has a strip of its own below the last boxes (Main Agent, 2026-10-06: the footer
+    # ran behind the lower boxes and was cut off)
+    rows_y = [254 + i * 102 for i in range(8)]
     lw = 520
     lines, boxes = [], []
     for side, keys in (('L', LEFT), ('R', RIGHT)):
@@ -248,7 +250,7 @@ def banner(key, title, subtitle, data):
             lines.append(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="{3 if off else 4.5}" '
                          f'fill="{"#2c2c2e" if off else SK["accent"]}" stroke="{"none" if off else SK["text"]}" '
                          f'stroke-width="1"/>')
-    foot = ('<text x="960" y="1050" text-anchor="middle" class="foot">Xbox layout · Sprint by Pressing Left Stick: off · '
+    foot = ('<text x="960" y="1054" text-anchor="middle" class="foot">Xbox layout · Sprint by Pressing Left Stick: off · '
             'Quick Sign Casting: Quick Casting · Automatically Apply Blade Oils: on</text>')
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">'
            + '\n'.join(head) + controller() + '\n'.join(lines) + foot + '</svg>')
