@@ -107,7 +107,9 @@ foreach ($name in 'dx12user.settings', 'user.settings') {
     }
     Copy-Item -LiteralPath $f -Destination "$f.before-modern-control-map-$stamp"
     [System.IO.File]::WriteAllText($f, ($ls -join $n2), $utf8)
-    Write-Host "  ${name}: Left Stick Sprint off, alternative sign casting on"
+    Write-Host "  ${name}: Sprint by pressing Left Stick off, Quick Sign Casting on Quick Casting"
 }
 Write-Host ''
 Write-Host "  Modern Control Map installed. Backups: *.before-modern-control-map-$stamp"
+Write-Host '  Also set in the game: Options > Accessibility > Automatically Apply Blade Oils ON (required) and'
+Write-Host '  Manual Sword Drawing/Sheathing OFF (recommended).'

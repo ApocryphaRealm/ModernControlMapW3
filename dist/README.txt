@@ -5,6 +5,18 @@ A complete controller layout for The Witcher 3, built for the way modern action 
 triggers and bumpers, signs on the face buttons, and every context - on foot, in combat, on horseback, in the water and
 at sea - laid out to match. Xbox button names; the same positions on any controller the game supports.
 
+REQUIRED GAME SETTINGS
+The map is made to be played with these options:
+  - Options > Gameplay > Quick Sign Casting: Quick Casting - REQUIRED. Holding LT and pressing a sign's button casts
+    that sign only in Quick Casting. The installer sets it.
+  - Options > Controls > [Controller Only] Sprint by pressing Left Stick: OFF - REQUIRED. While it is on, the game
+    ignores the Sprint button (B) on a controller and runs only from the left stick, which the map gives to Witcher
+    Senses, Roach and the quick item. The installer turns it off.
+  - Options > Accessibility > Automatically Apply Blade Oils: ON - REQUIRED. The map has no oil buttons (the D-pad holds
+    are potions), so without it oils go on only from the inventory. Set it in the game's options yourself.
+  - Options > Accessibility > Manual Sword Drawing/Sheathing: OFF - RECOMMENDED. With it off the game draws the right
+    sword for the fight by itself; X still draws either sword (tap steel, hold silver). Set it yourself.
+
 THE LAYOUT
   Exploration   LT cast sign · L-Stick hold Witcher Senses, press twice call Roach · D-pad Up quick item
                 RT strong attack · RB fast attack · Y jump / climb · X swords · B sprint · A interact
@@ -24,13 +36,14 @@ WHAT THE MOD ADDS TO THE BINDINGS
   - Swords: X draws or sheathes the steel sword on a tap and the silver sword on a hold - the game's own draw, so with
     the other sword out it switches.
   - Dismount: the hold-to-dismount circle follows A (the game always showed it on B, where Gallop is).
-  - Signs: with LT held, each sign has its own button; on their own those buttons do their normal job. LT on its own
+  - Signs: with LT held (Quick Casting), each sign has its own button; on their own those buttons do their normal job. LT on its own
     still casts the selected sign.
 
 INSTALL
 1. Install the archive as a mod (Mod Organizer 2, Vortex), or copy the Mods folder into the game folder.
 2. Close the game and run "Modern Control Map Installer\Install Modern Control Map.bat". It sets the controller
-   bindings in Documents\The Witcher 3\input.settings, turns Left Stick Sprint off and alternative sign casting on, and
+   bindings in Documents\The Witcher 3\input.settings, turns Sprint by pressing Left Stick off and Quick Sign Casting
+   to Quick Casting, and
    leaves every keyboard binding as it is. It backs up each file it changes first.
    Mod Organizer 2 with profile-specific game settings: drag the profile folder onto the .bat instead.
 Patch 5.0 (Remastered) only. No other mod required.
