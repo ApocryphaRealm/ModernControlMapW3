@@ -7,6 +7,14 @@ Rule 61: this mod's own history, kept beside the code it describes.
 > number; at `.9` the MINOR rolls. The next number is LAST WORKING + 1; failed/scratch/
 > untested numbers are reused. Numbers come from version-gate.ps1.
 
+### 1.0.0 optional file: Alt 1 - 2026-10-07
+
+- **Alt 1: Witcher Senses on LB** (the owner: "make an alternate version with a alt 1 suffix with the change" - a player
+  asked for Witcher Senses off the stick button, for the button's sake). In exploration LB holds Witcher Senses instead
+  of holding the left stick; the left stick keeps calling Roach (press twice). Everything else is the 1.0.0 map: with
+  swords out LB still blocks and parries. Built by `tools/package.ps1 -Variant alt1` (build_map.py VARIANTS); its
+  installer, run on the game's default bindings, sets exploration LB to Witcher Senses and leaves combat LB on guard.
+
 ## 1.0.0 - 2026-10-06 - untested
 
 First build (the owner, 2026-10-06: *"finalize the control map we just made ... call it like modern control map for
