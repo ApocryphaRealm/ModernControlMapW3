@@ -1,62 +1,103 @@
-Modern Control Map (The Witcher 3: Wild Hunt)
+Witcher III Modding Tool, developed and released by CD PROJEKT RED
+
+Modern Control Remapping (The Witcher 3: Wild Hunt)
 Version 0.0.0
 
-A complete controller layout for The Witcher 3, built for the way modern action games are played: attacks on the
-triggers and bumpers, signs on the face buttons, and every context - on foot, in combat, on horseback, in the water and
-at sea - laid out to match. Xbox button names; the same positions on any controller the game supports.
+MODERN CONTROL MAP IS NOW MODERN CONTROL REMAPPING
+This is the new version of Modern Control Map. It carries that mod's controller layout and its controls (tap or hold
+Sprint, one button for both swords, gallop on B and dismount on A, the sign buttons) by itself, and adds the Key
+Bindings and Controller Scheme features below. If Modern Control Map is installed, remove it and install this file in
+its place - do not run both: both scripts would act on one press. A controller map you installed with Modern Control
+Map stays in your settings; you do not need to install it again.
 
-REQUIRED GAME SETTINGS
-The map is made to be played with these options:
-  - Options > Gameplay > Quick Sign Casting: Quick Casting - REQUIRED. Holding LT and pressing a sign's button casts
-    that sign only in Quick Casting. The installer sets it.
-  - Options > Controls > Sprint by Pressing Left Stick: OFF - REQUIRED. While it is on, the game
-    ignores the Sprint button (B) on a controller and runs only from the left stick, which the map gives to Witcher
-    Senses, Roach and the quick item. The installer turns it off.
-  - Options > Accessibility > Automatically Apply Blade Oils: ON - REQUIRED. The map has no oil buttons (the D-pad holds
-    are potions), so without it oils go on only from the inventory. Set it in the game's options yourself.
-  - Options > Accessibility > Manual Sword Drawing/Sheathing: OFF - RECOMMENDED. With it off the game draws the right
-    sword for the fight by itself; X still draws either sword (tap steel, hold silver). Set it yourself.
+The Witcher 3's Key Bindings page gives one key to several actions at once, cannot leave a control with no key from
+the keyboard, and does not let menu keys and gameplay keys differ. This mod changes that page. There is no other menu
+and no settings file: everything is on Options > Key Bindings.
 
-THE LAYOUT
-  Exploration   LT cast sign · L-Stick hold Witcher Senses, press twice call Roach · D-pad Up quick item
-                RT strong attack · RB fast attack · Y jump / climb · X swords · B sprint · A interact
-  Combat        LT cast sign · LB parry · L-Stick quick item · RT strong attack · RB fast attack
-                X swords · B tap dodge, hold run · A roll
-  Horseback     LT cast sign · D-pad Up Witcher Senses · RT attack · RB crossbow · Y jump
-                X swords · B canter / gallop · A hold to dismount
-  Swimming      D-pad Up Witcher Senses · L-Stick crossbow · B dive / swim fast · Y surface / climb out
-  Sailing       A speed up · X slow down · B disembark · RB crossbow · D-pad Up Witcher Senses
-  Everywhere    D-pad Left / Right potions (hold to swap) · D-pad Down quick access menu
-                View game menu (hold: glossary) · Menu quick menu (hold: map) · R-Stick camera lock / track quest
-  Sign casting  hold LT, then RT Igni · B Quen · Y Axii · X Yrden · RB Aard
-The banners show every button in every context.
+CLEAR A ROW
+Select a row, press Enter (or click it), then press Delete - or the key the row already has. The row has no key, and stays that way: the game saves it
+like any other binding. A middle click on a row does the same, as it always has in the game.
 
-WHAT THE MOD ADDS TO THE BINDINGS
-  - Sprint: out of combat a tap of B switches running on or off; a hold runs while held.
-  - Swords: X draws or sheathes the steel sword on a tap and the silver sword on a hold - the game's own draw, so with
-    the other sword out it switches.
-  - Dismount: the hold-to-dismount circle follows A (the game always showed it on B, where Gallop is).
-  - Signs: with LT held (Quick Casting), each sign has its own button; on their own those buttons do their normal job. LT on its own
-    still casts the selected sign.
+LINKED ROWS ARE SPLIT
+Where the game's page had one row for several actions, each has its own row now, starting on the same key:
+  Jump / Climb / Exploration - Roll / Horse Riding - Jump
+  Talk / Loot / Pick Up / Mount / Open / Fast travel / Examine / Interact (everything else)
+  Fast Attack / Fast Attack - Hold / Horse Riding - Fast Attack
+  Strong Attack / Strong Attack - Hold
+  Cast Sign / Horse Riding - Cast Sign
+  Use Quick Access Item / Horse Riding - Use Quick Access Item
+  Gallop / Canter      Dismount / Disembark      Change Objective / Track Quest
+  Draw/Sheathe / Steel sword oils / Silver sword oils (the oil holds the game kept on the sword keys)
+  walking forward and back / Talk - Up / Talk - Down / Sailing - Stop / Reverse
+Rows that came from one row may share a key again, as they did.
+
+MENU KEYS AND GAMEPLAY KEYS
+New rows for keys the game used but never showed: Quick Access Menu - Meditation, Use Quick Access Item - Cancel,
+Sailing - Accelerate, and Photo Mode's movement keys. A row used in a menu-like screen (dialogue choices, the quick
+access menu, photo mode, aiming a throw) can hold the same key as a gameplay row: giving it a key never takes that key
+off a gameplay row, and the other way round.
+
+ONE ROW: DRAW/SHEATHE - TAP FOR STEEL, HOLD FOR SILVER
+Draw Steel Sword, Draw Silver Sword and their sheathe holds are one row, "Draw/Sheathe", on Key Bindings and on the
+controller list. Tap its button: the steel sword is drawn, or sheathed if it is out. Hold it (about a third of a
+second) and let go: the silver sword, the same way. With the other sword out, the press switches swords. On a
+controller this works when both swords are on one button (the controller map puts them on X). Until you give the row
+a key, the keys you had stay as they were. If an oil row is on the same key, holding the key applies oil too - clear
+that row (Delete) to keep the hold for the silver sword alone.
+
+TAP SPRINT TO DODGE OR TO RUN
+In combat, tap Sprint and Geralt (or Ciri) dodges; hold it and he runs - keyboard or controller. Out of combat on a
+controller, a tap of Sprint starts running and keeps running until you tap it again; a hold runs while held. Near
+something you can talk to or loot, a tap still does that. On a controller in combat, where Sprint and Combat Roll
+share a button, a tap dodges instead of rolling. Switch it off in Settings > Mods > Modern
+Control Remapping. Nothing dodges or rolls out of combat.
+
+HORSE: GALLOP ON B, DISMOUNT ON A
+The game draws its hold-to-dismount circle on B whatever Horse Dismount is bound to, and a full hold of B threw the
+rider off. The circle now follows Horse Dismount's own button: with the controller map, hold B to gallop and hold A to
+dismount.
+
+SIGN BUTTONS
+With Options > Gameplay > alternative sign casting on and the five Select Sign actions on pad buttons (the controller
+map: Igni RT, Quen B, Axii Y, Yrden X, Aard RB), hold Cast Sign and press a sign's button to cast it. On their own those
+buttons keep their own jobs (B runs, X is the weapon button). Jump waits while Cast Sign is held and half a second
+after a cast.
+
+CONTROLLER ROWS (Options > Controller Scheme)
+Under the controller diagram, a list of the controls of the tab on show (Exploration, Swimming and Diving, Combat, Horse
+Riding, Sailing), each with the button it has now. D-pad or sticks choose a row; A, then any pad button, gives the
+control that button (in every tab it is used in - the row says which); Start cancels.
+To unbind a control in a tab: A, then the button it already has. It shows "-" there and does nothing in that tab, so
+another control can have the button there; A and any button binds it again. Its button is kept underneath, because the
+game cannot give a control a button again once its button is taken away - so an unbound row can always be bound again.
+The controls the game handles one by one can be unbound this way: Sprint, the attacks, Cast Sign, Parry, Witcher
+Senses, Dodge, Roll, Quick Access Item, Camera Lock, Summon Horse, the potions, Draw/Sheathe, Dive and Surface. A
+control that already has no button (or a PlayStation one) is shown dim and cannot be changed from the list.
+
+CONTROLLER MAP
+The controller layout comes with the mod as an installer: close the game
+and run "Controller Map Installer\Install Controller Map.bat" (drag a settings folder onto it to install there instead
+of Documents\The Witcher 3 - for Mod Organizer 2 with profile-specific settings, the profile folder). It sets 250
+controller bindings in every context (exploration, combat, horse, swimming, diving, sailing, aiming, the quick access
+menu) and leaves every keyboard key alone; it also turns Left Stick Sprint off and alternative sign casting on. Each
+file it changes is backed up first, and "Uninstall Controller Map.bat" puts back the first backup. Also set in the game:
+Options > Accessibility > Automatically Apply Blade Oils on, and Manual Sword Drawing/Sheathing off.
+
+LOCKED ROWS
+Inventory, Map, Journal, Character, Alchemy, Crafting, Bestiary, Glossary, Gwent deck, Meditation, Hub and Toggle HUD
+can be moved or cleared without turning Safeties off.
 
 INSTALL
-1. Install the archive as a mod (Mod Organizer 2, Vortex), or copy the Mods folder into the game folder.
-2. Close the game and run "Modern Control Map Installer\Install Modern Control Map.bat". It sets the controller
-   bindings in Documents\The Witcher 3\input.settings, turns Sprint by Pressing Left Stick off and Quick Sign Casting
-   to Quick Casting, and
-   leaves every keyboard binding as it is. It backs up each file it changes first.
-   Mod Organizer 2 with profile-specific game settings: drag the profile folder onto the .bat instead.
+With a mod manager (Mod Organizer 2, Vortex): install the archive as a mod. By hand: copy the Mods and bin folders into
+the game folder (The Witcher 3), allowing bin\config\r4game\user_config_matrix\pc\input.xml to be replaced.
 Patch 5.0 (Remastered) only. No other mod required.
 
-THE MAP IS FIXED
-Set it with the installer, not with Options > Controller Scheme: the game cannot give a controller control a button
-again once it has none, so change buttons in input.settings with the game closed.
-
 COMPATIBILITY
-The script wraps the game's handlers for Sprint, the two swords, the sign buttons, the dismount indicator and Jump with
-annotations, so it merges with other script mods without Script Merger. Each part acts only on a controller and only
-with the binding it serves in place.
+Replaces the game's input.xml (the list of rows on the Key Bindings page): another mod that replaces it too wins or
+loses by install order. The scripts wrap functions of the game's in-game menu, player input and HUD with annotations,
+so they merge with other script mods without Script Merger. Do not keep Modern Control Map installed beside it:
+this mod is its new version and carries its behaviour, and both would act on one press.
 
 UNINSTALL
-Run "Uninstall Modern Control Map.bat" (it restores the files as they were before the first install - keyboard changes
-made since then go with them), then remove the mod.
+Remove the mod. Rows that do not exist in the game's own list go back to the game's linked rows the next time the game
+starts; Options > Key Bindings > Reset to defaults puts every key back.
