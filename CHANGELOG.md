@@ -7,6 +7,11 @@ Rule 61: this mod's own history, kept beside the code it describes.
 > number; at `.9` the MINOR rolls. The next number is LAST WORKING + 1; failed/scratch/
 > untested numbers are reused. Numbers come from version-gate.ps1.
 
+## 1.0.2 - 2026-10-16 - untested
+
+### Changed
+- Swimming on a controller: tap B dives, hold B swims fast (the owner, 2026-10-16: 'dive and swim fast are the same button and hold to action, so dive should be tap B and swimming fast should be hold B'). On the surface the press of Dive is held back and a release within 0.25 s dives; Sprint answers at once, so holding B swims fast. A tap of B while swimming no longer toggles running. Under water, the keyboard and every other context are unchanged.
+
 ## 1.0.1 - 2026-10-14 - working
 
 ### Changed

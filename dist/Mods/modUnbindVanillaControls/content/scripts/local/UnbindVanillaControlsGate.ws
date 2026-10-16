@@ -154,10 +154,65 @@ function OnCbtThrowCastAbort(action : SInputAction)
 	if (!UVC_ActionOffHere(action.aName)) { wrappedMethod(action); }
 }
 
+// SWIMMING ON A CONTROLLER: TAP B TO DIVE, HOLD B TO SWIM FAST (the owner, 2026-10-16: "dive and swim fast are the same
+// button and hold to action, so dive should be tap B and swimming fast should be hold B"). The game's Swimming and Diving
+// contexts put both DiveDown and Sprint on B. On the surface, the press of DiveDown is held back: Sprint answers at once
+// (swimming fast while B is down), and a release of B within 0.25 s dives - the press branch of the game's own OnDiving,
+// run from here. Under water (Diving context), on the keyboard and in every other context nothing changes.
+@addField(CPlayerInput)
+var uvcSwimDivePressedAt : float;
+
+function UVC_SwimTapDive()
+{
+	if (thePlayer && thePlayer.OnAllowedDiveDown() && !thePlayer.OnCheckDiving())
+	{
+		thePlayer.OnDive();
+		if (thePlayer.bLAxisReleased)
+		{
+			thePlayer.SetBehaviorVariable('divePitch', -1.0);
+		}
+		else
+		{
+			thePlayer.SetBehaviorVariable('divePitch', -0.9);
+		}
+		thePlayer.OnDiveInput(-1.f);
+		if (thePlayer.rangedWeapon.GetCurrentStateName() != 'State_WeaponWait')
+		{
+			thePlayer.OnRangedForceHolster(true, false);
+			thePlayer.OnFullyBlendedIdle();
+		}
+		LogChannel('UnbindVanillaControls', "Swimming: B tapped, dive");
+	}
+}
+
 @wrapMethod(CPlayerInput)
 function OnDiving(action : SInputAction)
 {
-	if (!UVC_ActionOffHere(action.aName)) { wrappedMethod(action); }
+	var now : float;
+	var heldBack : bool;
+
+	if (!UVC_ActionOffHere(action.aName))
+	{
+		heldBack = false;
+		if (action.aName == 'DiveDown' && theInput.LastUsedGamepad() && thePlayer && thePlayer.IsSwimming())
+		{
+			now = theGame.GetEngineTimeAsSeconds();
+			if (IsPressed(action) && !thePlayer.OnCheckDiving() && IsActionAllowed(EIAB_Dive))
+			{
+				uvcSwimDivePressedAt = now;
+				heldBack = true;
+			}
+			else if (IsReleased(action) && uvcSwimDivePressedAt > 0)
+			{
+				if (now - uvcSwimDivePressedAt <= 0.25f)
+				{
+					UVC_SwimTapDive();
+				}
+				uvcSwimDivePressedAt = 0;
+			}
+		}
+		if (!heldBack) { wrappedMethod(action); }
+	}
 }
 
 // Dismount follows its own binding on a controller (taken back from Modern Control Map, part 3, on 2026-10-14 - the owner:

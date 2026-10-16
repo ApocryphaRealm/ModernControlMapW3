@@ -79,7 +79,7 @@ function OnCommSprint(action : SInputAction)
 						UVC_TapDodge();
 					}
 				}
-				else if (theInput.LastUsedGamepad())
+				else if (theInput.LastUsedGamepad() && !thePlayer.IsSwimming())
 				{
 					UVC_TapSprintToggle();
 				}
