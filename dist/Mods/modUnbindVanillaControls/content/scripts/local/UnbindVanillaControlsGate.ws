@@ -215,6 +215,99 @@ function OnDiving(action : SInputAction)
 	}
 }
 
+// THE SWIMMING HINT SAYS PRESS FOR DIVE, NOT HOLD (the owner, 2026-10-20: "the on-screen control hint while swimming says to
+// hold B to dive when it should say tap"). The game builds every hint in CR4HudModuleControlsFeedback.SendInputContextActions
+// and writes a fixed "Hold" in front of DiveDown whatever the player does. With a controller on the water's surface Dive is
+// a tap now (above), so the surface list (the Swimming context) is sent again with Dive under the game's own single-press
+// prefix - ControlLayout_press, "Press", the one the game puts on its toggle sprint - and fast swim as the game builds it
+// (Hold). Under water (Diving) and on the keyboard Dive stays a hold, so the game's list is left alone there.
+@wrapMethod(CR4HudModuleControlsFeedback)
+function SendInputContextActions(inputContextName : name, optional isForced : bool)
+{
+	var list : CScriptedFlashArray;
+	var holder : CScriptedFlashObject;
+	var hintObj : CScriptedFlashObject;
+	var actions : array<name>;
+	var padKeys : array<EInputKey>;
+	var openSym, closeSym, prefix, label, color : string;
+	var action : name;
+	var i : int;
+
+	wrappedMethod(inputContextName, isForced);
+
+	if (inputContextName != 'Swimming' || !GetEnabled() || !theInput.LastUsedGamepad() || theInput.LastUsedPCInput() || m_altSignCasting)
+	{
+		return;
+	}
+
+	GetBracketSymbols(openSym, closeSym);
+	color = "<font color=\"#FCAD36\">";
+	list = m_flashValueStorage.CreateTempFlashArray();
+
+	actions.PushBack('DiveDown');
+	if (thePlayer.IsActionAllowed(EIAB_RunAndSprint))
+	{
+		if (!thePlayer.GetLeftStickSprint())
+		{
+			actions.PushBack('Sprint');
+		}
+		else
+		{
+			actions.PushBack('SprintToggle');
+		}
+	}
+
+	for (i = 0; i < actions.Size(); i += 1)
+	{
+		action = actions[i];
+		padKeys.Clear();
+		theInput.GetPadKeysForAction(action, padKeys);
+
+		holder = m_flashValueStorage.CreateTempFlashObject();
+		hintObj = holder.CreateFlashObject("red.game.witcher3.data.KeyBindingData");
+		if (padKeys.Size() > 0)
+		{
+			hintObj.SetMemberFlashInt("gamepad_keyCode", padKeys[0]);
+		}
+		else
+		{
+			hintObj.SetMemberFlashInt("gamepad_keyCode", 0);
+		}
+		hintObj.SetMemberFlashInt("keyboard_keyCode", 0);
+
+		prefix = "";
+		if (action == 'DiveDown')
+		{
+			label = GetLocStringByKeyExt("panel_input_action_" + StrLower(action));
+			prefix = color + openSym + StrReplace(GetLocStringByKeyExt("ControlLayout_press"), " -", "") + closeSym + "</font>";
+		}
+		else
+		{
+			label = GetLocStringByKeyExt("panel_input_action_fast_swiming");
+			if (action == 'Sprint' && !theInput.IsToggleSprintBound())
+			{
+				prefix = color + openSym + GetLocStringByKeyExt("ControlLayout_hold") + closeSym + "</font>";
+			}
+			else if (action == 'SprintToggle' && !theInput.IsToggleSprintBound())
+			{
+				prefix = color + openSym + StrReplace(GetLocStringByKeyExt("ControlLayout_press"), " -", "") + closeSym + "</font>";
+			}
+		}
+
+		if (theGame.IsLanguageArabic())
+		{
+			hintObj.SetMemberFlashString("label", prefix + " <font color=\"#FFFFFF\">" + label + "</font>");
+		}
+		else
+		{
+			hintObj.SetMemberFlashString("label", " <font color=\"#FFFFFF\">" + label + "</font> " + prefix);
+		}
+		list.PushBackFlashObject(hintObj);
+	}
+
+	m_flashValueStorage.SetFlashArray(KEY_CONTROLS_FEEDBACK_LIST, list);
+}
+
 // Dismount follows its own binding on a controller (taken back from Modern Control Map, part 3, on 2026-10-14 - the owner:
 // "holding A and holding B both dismount when it should be sprinting with B and dismounting with A"). The game's horse
 // script and HUD hand the hold-to-dismount indicator a fixed B (EnableHudHoldIndicator_Impl(IK_Pad_B_CIRCLE, ...,

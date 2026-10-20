@@ -12,6 +12,9 @@ Rule 61: this mod's own history, kept beside the code it describes.
 ### Changed
 - Swimming on a controller: tap B dives, hold B swims fast (the owner, 2026-10-16: 'dive and swim fast are the same button and hold to action, so dive should be tap B and swimming fast should be hold B'). On the surface the press of Dive is held back and a release within 0.25 s dives; Sprint answers at once, so holding B swims fast. A tap of B while swimming no longer toggles running. Under water, the keyboard and every other context are unchanged.
 
+### Fixed
+- The swimming hint on a controller said Hold for Dive; Dive is a tap there, so it now says Press (the owner, 2026-10-20: 'the on-screen control hint while swimming says to hold B to dive when it should say tap'). The game writes a fixed Hold in front of Dive in its hint list (CR4HudModuleControlsFeedback.SendInputContextActions); on the surface with a controller that list is now sent again with Dive under the game's own single-press word (the one it puts on toggle sprint - no new text, so every language already reads it), and Swim Swiftly keeps Hold. Under water and on the keyboard Dive is still a hold, so those hints are unchanged. A script wrap, no replaced method.
+
 ## 1.0.1 - 2026-10-14 - working
 
 ### Changed
