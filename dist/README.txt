@@ -59,9 +59,15 @@ dismount.
 
 SIGN BUTTONS
 With Options > Gameplay > alternative sign casting on and the five Select Sign actions on pad buttons (the controller
-map: Igni RT, Quen B, Axii Y, Yrden X, Aard RB), hold Cast Sign and press a sign's button to cast it. On their own those
-buttons keep their own jobs (B runs, X is the weapon button). Jump waits while Cast Sign is held and half a second
-after a cast.
+map: Igni RT, Quen B, Axii Y, Yrden X, Aard RB), hold Cast Sign and press a sign's button to cast it. Keep the sign's
+button held as well for its alternate form (Firestream, Active Shield, and so on); a tap gives the normal sign. Cast Sign
+on its own casts nothing with alternative sign casting on - that is the game's own rule for that option. On their own
+the sign buttons keep their own jobs (B runs, X is the weapon button). Jump waits while Cast Sign is held and half a
+second after a cast.
+
+USE QUICK ACCESS ITEM (bombs, crossbow)
+With the controller map: D-pad Up in exploration, L3 in combat and in water. Hold it to aim; let go to throw or shoot.
+If you installed the map before 1.0.2, run "Install Controller Map.bat" again: the aiming hold from D-pad Up needs it.
 
 CONTROLLER ROWS (Options > Controller Scheme)
 Under the controller diagram, a list of the controls of the tab on show (Exploration, Swimming and Diving, Combat, Horse

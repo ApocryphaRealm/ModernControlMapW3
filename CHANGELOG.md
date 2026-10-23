@@ -13,6 +13,21 @@ Rule 61: this mod's own history, kept beside the code it describes.
 - Swimming on a controller: tap B dives, hold B swims fast (the owner, 2026-10-16: 'dive and swim fast are the same button and hold to action, so dive should be tap B and swimming fast should be hold B'). On the surface the press of Dive is held back and a release within 0.25 s dives; Sprint answers at once, so holding B swims fast. A tap of B while swimming no longer toggles running. Under water, the keyboard and every other context are unchanged.
 
 ### Fixed
+- **Alternate signs on a controller** (Firestream, Active Shield and the rest - players' reports on Nexus, 2026-10-06
+  to 10-14: "still can't activate sign hold mode"). With the controller map, hold LT, then hold a sign's button: the
+  sign comes out in its alternate form; a tap gives the normal sign. When a sign starts, the game decides the
+  alternate form in W3SignOwnerPlayer.ChangeAspect, and on a pad it asked whether the game's DEFAULT second button for
+  that sign was still held (Igni: Parry or Witcher Senses, Aard: Sprint, and so on), never the sign's own Select
+  button the map casts with - so no held button could make the alternate. On a pad with the sign buttons bound it now
+  asks the sign's own button, as the game already does for the keyboard; the game's other conditions (the skill,
+  out-of-combat casting, the Gryphon set's full stamina) are kept. UnbindVanillaControlsSigns.ws, a wrapper.
+- **Aiming a throw from D-pad Up in exploration** (a player's report, 2026-10-12: the crossbow "fires immediately
+  without aiming"). Use Quick Access Item is D-pad Up in exploration and L3 in combat, but the map left only L3 in the
+  aiming contexts (ThrowHold, ThrowHoldChain), which the game switches to while a throw is aimed - so D-pad Up let go
+  of the throw the moment aiming began: the crossbow fired at once and a held bomb was thrown without aiming. Both
+  aiming contexts now keep the throw on D-pad Up as well as L3. Run "Install Controller Map.bat" again to get it
+  (it replaces only the map's own controller lines; keyboard keys stay as they are).
+- The scripts are compiled with REDkit before every package (tools\dry_compile.py, run by tools\package.ps1).
 - The swimming hint on a controller said Hold for Dive; Dive is a tap there, so it now says Press (the owner, 2026-10-20: 'the on-screen control hint while swimming says to hold B to dive when it should say tap'). The game writes a fixed Hold in front of Dive in its hint list (CR4HudModuleControlsFeedback.SendInputContextActions); on the surface with a controller that list is now sent again with Dive under the game's own single-press word (the one it puts on toggle sprint - no new text, so every language already reads it), and Swim Swiftly keeps Hold. Under water and on the keyboard Dive is still a hold, so those hints are unchanged. A script wrap, no replaced method.
 
 ## 1.0.1 - 2026-10-14 - working

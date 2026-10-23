@@ -1,5 +1,6 @@
 # Package Modern Control Remapping (The Witcher 3) for testing:
-#   1. tools\gen_menu.py --check  (the dist files are what the generator builds, every action and label checked)
+#   1. tools\gen_menu.py --check  (the dist files are what the generator builds, every action and label checked), then
+#      tools\dry_compile.py      (REDkit compiles the scripts over the game's own)
 #   2. copy dist\ to <stage>\Witcher 3 - Modern Control Remapping\Modern Control Remapping <VERSION>\
 #   3. stamp the version into the package README (rule 6: the version at the top of the README)
 # The version comes from VERSION, which only version-gate.ps1 writes. The stage folder comes from the project's resolver
@@ -18,6 +19,9 @@ if ($version -notmatch '^\d+\.\d+\.\d+$' -or $version -eq '0.0.0') { throw "VERS
 
 & python -I (Join-Path $PSScriptRoot 'gen_menu.py') --check
 if ($LASTEXITCODE -ne 0) { throw 'gen_menu.py --check failed - the package is not built' }
+# a script error anywhere stops the game at start-up for every mod: REDkit compiles them offline first (1.0.2)
+& python -I (Join-Path $PSScriptRoot 'dry_compile.py')
+if ($LASTEXITCODE -ne 0) { throw 'tools\dry_compile.py failed - the scripts do not compile (build\dry_compile.log); nothing packaged' }
 
 . (Join-Path $ProjectRoot '.MD\scripts\distro-names.ps1')
 $root = Resolve-PackageRoot -Root (Join-Path $ProjectRoot $Stage) -ModName 'Modern Control Remapping' -Game 'Witcher 3' -ProjectRoot $ProjectRoot

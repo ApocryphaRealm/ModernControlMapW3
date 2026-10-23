@@ -2042,7 +2042,8 @@
    "context": "ThrowHold",
    "action": "ThrowItem",
    "pad": [
-    "IK_Pad_LeftThumb=(Action=ThrowItem)"
+    "IK_Pad_LeftThumb=(Action=ThrowItem)",
+    "IK_Pad_DigitUp=(Action=ThrowItem)"
    ],
    "none": []
   },
@@ -2050,7 +2051,8 @@
    "context": "ThrowHold",
    "action": "ThrowItemHold",
    "pad": [
-    "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
+    "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)",
+    "IK_Pad_DigitUp=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
    "none": []
   },
@@ -2174,7 +2176,8 @@
    "context": "ThrowHoldChain",
    "action": "ThrowItem",
    "pad": [
-    "IK_Pad_LeftThumb=(Action=ThrowItem)"
+    "IK_Pad_LeftThumb=(Action=ThrowItem)",
+    "IK_Pad_DigitUp=(Action=ThrowItem)"
    ],
    "none": []
   },
@@ -2182,7 +2185,8 @@
    "context": "ThrowHoldChain",
    "action": "ThrowItemHold",
    "pad": [
-    "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
+    "IK_Pad_LeftThumb=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)",
+    "IK_Pad_DigitUp=(Action=ThrowItemHold,State=Duration,IdleTime=0.2)"
    ],
    "none": []
   }
